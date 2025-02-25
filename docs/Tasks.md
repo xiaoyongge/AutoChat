@@ -9,10 +9,10 @@
 - [x] 配置开发环境
 
 ### 1.2 网络层封装（4天）
-- [ ] 实现 URLSession/Combine 网络请求封装
-- [ ] WebSocket 连接管理
+- [x] 实现 URLSession/Combine 网络请求封装
+- [x] WebSocket 连接管理
 - [ ] AI API 接口定义和集成
-- [ ] 网络状态监控
+- [x] 网络状态监控
 
 ### 1.3 数据持久化（4天）
 - [ ] CoreData 模型设计
