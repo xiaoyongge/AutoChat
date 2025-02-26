@@ -41,16 +41,3 @@ struct ChatListView: View {
         .navigationTitle("聊天")
     }
 }
-
-struct SettingsView: View {
-    var body: some View {
-        List {
-            Text("设置界面待实现")
-        }
-        .navigationTitle("设置")
-    }
-}
-
-#Preview {
-    ContentView()
-}
