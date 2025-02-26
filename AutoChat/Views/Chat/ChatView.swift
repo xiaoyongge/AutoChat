@@ -39,28 +39,6 @@ struct ChatView: View {
     }
 }
 
-struct MessageBubbleView: View {
-    let message: ChatMessage
-    
-    var body: some View {
-        HStack {
-            if message.isUserMessage {
-                Spacer()
-            }
-            
-            Text(message.content)
-                .padding(12)
-                .background(message.isUserMessage ? Color.blue : Color.gray.opacity(0.2))
-                .foregroundColor(message.isUserMessage ? .white : .primary)
-                .cornerRadius(16)
-            
-            if !message.isUserMessage {
-                Spacer()
-            }
-        }
-    }
-}
-
 #Preview {
     ChatView()
 }
