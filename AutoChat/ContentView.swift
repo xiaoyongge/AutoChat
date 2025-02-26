@@ -8,14 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTab = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $selectedTab) {
+            NavigationView {
+                ChatListView()
+            }
+            .tabItem {
+                Image(systemName: "bubble.left.and.bubble.right")
+                Text("聊天")
+            }
+            .tag(0)
+            
+            NavigationView {
+                SettingsView()
+            }
+            .tabItem {
+                Image(systemName: "gear")
+                Text("设置")
+            }
+            .tag(1)
         }
-        .padding()
+    }
+}
+
+struct ChatListView: View {
+    var body: some View {
+        List {
+            Text("聊天列表待实现")
+        }
+        .navigationTitle("聊天")
+    }
+}
+
+struct SettingsView: View {
+    var body: some View {
+        List {
+            Text("设置界面待实现")
+        }
+        .navigationTitle("设置")
     }
 }
 
